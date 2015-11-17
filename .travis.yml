@@ -1,40 +1,29 @@
 language: android
 
-android:
-components:
-    # Uncomment the lines below if you want to
-    # use the latest revision of Android SDK Tools
-    - platform-tools
-    - tools
+#android:
+#components:
+#- android-23
+#- build-tools-23.0.1
 
-    # The BuildTools version used by your project
-    - build-tools-23.0.1
+#- platform-tools
+#- tools
 
-    # The SDK version used to compile your project
-    - android-23
+#- extra-android-m2repository
+# - extra-google-google_play_services
+#- extra-google-m2repository
 
-    # Additional components
-    - extra-android-m2repository
-    # - extra-google-google_play_services
-    # - extra-google-m2repository
-    # - addon-google_apis-google-19
-
-    # Specify at least one system image,
-    # if you need to run emulator(s) during your tests
-    # - sys-img-armeabi-v7a-android-19
-    # - sys-img-x86-android-17
 licenses:
-    - android-sdk-license-.+
+- android-sdk-license-.+
 
 before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
 cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+directories:
+- $HOME/.gradle/caches/
+- $HOME/.gradle/wrapper/
 
 # Simple build test
 script:
-    - echo "Building app"
-    - ./gradlew assembleDebug
+- echo "Building app"
+- ./gradlew assembleDebug
