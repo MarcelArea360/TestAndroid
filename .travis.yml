@@ -8,6 +8,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
+# Simple build test
 script:
     - echo "Building app"
     - ./gradlew assembleDebug
