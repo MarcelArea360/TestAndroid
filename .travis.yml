@@ -1,11 +1,11 @@
 language: android
 
 android:
-  components:
+components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    # - platform-tools
-    # - tools
+    - platform-tools
+    - tools
 
     # The BuildTools version used by your project
     - build-tools-23.0.1
@@ -23,7 +23,7 @@ android:
     # if you need to run emulator(s) during your tests
     # - sys-img-armeabi-v7a-android-19
     # - sys-img-x86-android-17
-    licenses:
+licenses:
     - android-sdk-license-.+
 
 before_cache:
