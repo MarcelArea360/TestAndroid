@@ -2,20 +2,21 @@ language: android
 
 android:
 components:
-- platform-tools
-- tools
-
-- extra-android-m2repository
-- extra-android-support
-- extra-google-m2repository
+	- build-tools-23.0.1
+	- android-23
+	- platform-tools
+	- tools
+	- extra-android-m2repository
+	- extra-android-support
+	- extra-google-m2repository
 
 licenses:
-- android-sdk-license-.+
+	- android-sdk-license-.+
 
-cache:
-  directories:
-  - $HOME/.m2
-  - $HOME/.gradle
+#cache:
+#	directories:
+#		- $HOME/.m2
+#		- $HOME/.gradle
 
 #before_cache:
 #- rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -27,5 +28,5 @@ cache:
 
 # Simple build test
 script:
-- echo "Building app"
-- ./gradlew assembleDebug
+	- echo "Building app"
+	- ./gradlew assembleDebug
