@@ -30,3 +30,4 @@ licenses:
 script:
    - echo "Building app"
    - ./gradlew assembleDebug
+   - ./gradlew testDebugUnitTest
